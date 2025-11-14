@@ -67,12 +67,33 @@ function min (tal1:number, tal2:number, tal3:number, tal4:number) {
     else if (tal4<=tal1 && tal4<=tal3 && tal4<=tal2) { return write(tal4)}
 }
 write(min(tal1, tal2, tal3, tal4))
+
+
+write ("Uppgift 6: ")
+function min(...Antal: number[]):number {
+    console.log("manyMoreArgs", Antal);
+    let minsta = Antal[0]
+    for(let i = 0; i < Antal.length; i++) {
+        if(Antal[i] < minsta) {
+            minsta = Antal[i]
+        }
+    }
+
+return minsta
+}
+ write (min(100, 45, 18, 67))
 */
 
-write ("Uppgift 6: ") 
-function myFun(...manyMoreArgs) {
-    console.log("manyMoreArgs", manyMoreArgs);
-  }
-  
-  myFun("one", "two", "three", "four", "five", "six");
-  for (let i = 0; i<  ) {}  
+write ("Uppgift 7: ")
+function prod (...Antal: number[]):number {
+        console.log("manyMoreArgs", Antal);
+        let product = Antal[0]
+        console.log(Antal.length)
+    for (let i = 1; i < Antal.length; i++) {
+        console.log(product)
+        product = product * Antal[i]
+    }  
+    return product
+    
+}
+write(prod(2,3,4, 5, 7, 8))
