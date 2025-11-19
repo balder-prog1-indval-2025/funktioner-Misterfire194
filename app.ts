@@ -42,10 +42,8 @@ let tal4 = +await read("Tal 4: ")
 
 function ascending(tal1: number, tal2: number, tal3: number, tal4: number) { 
     if (tal1 <= tal2 && tal2 <= tal3 && tal3 <= tal4) {
-       write ("True")
        return true;
     } else { 
-        write ("False")
         return false; 
     } 
 }
@@ -61,10 +59,10 @@ let tal4 = +await read("Tal 4: ")
 let a = [tal1, tal2, tal3, tal4]
 write (a)
 function min (tal1:number, tal2:number, tal3:number, tal4:number) {
-    if (tal1 <= tal2 && tal1 <=tal3 && tal1<=tal4) { return write(tal1)}
-    else if (tal2<=tal1 && tal2<=tal3 && tal2<=tal4) { return write(tal2)}
-    else if (tal3<=tal1 && tal3<=tal2 && tal3<=tal4) { return write(tal3)}
-    else if (tal4<=tal1 && tal4<=tal3 && tal4<=tal2) { return write(tal4)}
+    if (tal1 <= tal2 && tal1 <=tal3 && tal1<=tal4) { return (tal1)}
+    else if (tal2<=tal1 && tal2<=tal3 && tal2<=tal4) { return (tal2)}
+    else if (tal3<=tal1 && tal3<=tal2 && tal3<=tal4) { return (tal3)}
+    else if (tal4<=tal1 && tal4<=tal3 && tal4<=tal2) { return (tal4)}
 }
 write(min(tal1, tal2, tal3, tal4))
 
@@ -82,7 +80,7 @@ function min(...Antal: number[]):number {
 return minsta
 }
  write (min(100, 45, 18, 67))
-*/
+
 
 write ("Uppgift 7: ")
 function prod (...Antal: number[]):number {
@@ -96,4 +94,36 @@ function prod (...Antal: number[]):number {
     return product
     
 }
-write(prod(2,3,4, 5, 7, 8))
+write(prod(2, 3, 4, 5, 7, 8))
+
+
+write ("Uppgift 8:")
+function includes (a: number,b: number[]) {
+for(let i = 0; i < b.length; i++) {
+    if(a==b[i]) {return true}
+}
+return false
+}
+write(includes (4, [1,2,3,3]))
+*/
+
+write ("Upggift 9:")
+function visaRepeterat (Ord, Antal:number) {
+for (let i = 0; i<Antal; i++) {
+write(Ord)
+}
+}
+visaRepeterat("",0)
+
+function visaUppdelat (a:string, b:string) {
+    let text = ""
+for (let i = 0; i< a.length ; i++){
+    text += a[i]
+    if (a[i] == b) {
+        write (text)
+        text = ""
+    }
+    //if (i = a.length) {write (text)}
+}
+}
+write(visaUppdelat ("Hallå-Hallå-Hallå", "-"))
