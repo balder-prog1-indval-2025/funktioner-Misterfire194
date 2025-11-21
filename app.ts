@@ -79,8 +79,8 @@ function min(...Antal: number[]):number {
 
 return minsta
 }
- write (min(100, 45, 18, 67))
-
+ write (min(100, 45, 18, 67, 1, 123123, 0.001))
+*/
 
 write ("Uppgift 7: ")
 function prod (...Antal: number[]):number {
@@ -88,15 +88,15 @@ function prod (...Antal: number[]):number {
         let product = Antal[0]
         console.log(Antal.length)
     for (let i = 1; i < Antal.length; i++) {
-        console.log(product)
         product = product * Antal[i]
+        console.log(product)
     }  
     return product
     
 }
-write(prod(2, 3, 4, 5, 7, 8))
+write(prod(2, 3, 4, 5, 7, 8, 9))
 
-
+/*
 write ("Uppgift 8:")
 function includes (a: number,b: number[]) {
 for(let i = 0; i < b.length; i++) {
@@ -105,7 +105,7 @@ for(let i = 0; i < b.length; i++) {
 return false
 }
 write(includes (4, [1,2,3,3]))
-*/
+
 
 write ("Upggift 9:")
 function visaRepeterat (Ord, Antal:number) {
@@ -117,13 +117,22 @@ visaRepeterat("",0)
 
 function visaUppdelat (a:string, b:string) {
     let text = ""
-for (let i = 0; i< a.length ; i++){
-    text += a[i]
+for (let i = 0; i< a.length; i++){
     if (a[i] == b) {
         write (text)
         text = ""
+    }else {text += a[i]}
+}
+write (text)
+}
+//visaUppdelat ("Hallå-Hallå-Hallå", "-")
+
+function antalMellanslag (a:string) {
+    let b = 0
+    for (let i = 0; i<a.length; i++) {
+        if (a[i] == " ") {b = b + 1}
     }
-    //if (i = a.length) {write (text)}
-}
-}
-write(visaUppdelat ("Hallå-Hallå-Hallå", "-"))
+    return b
+} let antal1 = antalMellanslag("Hej på dig")
+write (antal1)
+*/
