@@ -80,7 +80,7 @@ function min(...Antal: number[]):number {
 return minsta
 }
  write (min(100, 45, 18, 67, 1, 123123, 0.001))
-*/
+
 
 write ("Uppgift 7: ")
 function prod (...Antal: number[]):number {
@@ -96,7 +96,7 @@ function prod (...Antal: number[]):number {
 }
 write(prod(2, 3, 4, 5, 7, 8, 9))
 
-/*
+
 write ("Uppgift 8:")
 function includes (a: number,b: number[]) {
 for(let i = 0; i < b.length; i++) {
@@ -125,7 +125,7 @@ for (let i = 0; i< a.length; i++){
 }
 write (text)
 }
-//visaUppdelat ("Hallå-Hallå-Hallå", "-")
+visaUppdelat ("Hallå-Hallå-Hallå", "-")
 
 function antalMellanslag (a:string) {
     let b = 0
@@ -136,3 +136,16 @@ function antalMellanslag (a:string) {
 } let antal1 = antalMellanslag("Hej på dig")
 write (antal1)
 */
+
+//trello.com
+
+write ("Extrauppgift 1")
+function sameChar (a:string) {
+let x= 0
+    for (let i = 0; i < a.length; i++) {
+    if (a[0] == a[i]) {x = x+1}
+    if (x==a.length) { return true}
+}
+ return false
+}
+write (sameChar("aaaaaaa"))
